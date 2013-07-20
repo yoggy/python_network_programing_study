@@ -48,6 +48,8 @@ class SampleSession(Session):
 		self.answer_str = " ".join([str(v) for v in self.answer])
 
 	def send_problem(self, count):
+		self.sendln("\r\nplease sort numbers into ascending order.")
+
 		self.generate_numbers(count)
 		self.send("numbers : ")
 		for n in self.numbers:
@@ -64,8 +66,7 @@ class SampleSession(Session):
 	def on_connect(self):
 		self.send_banner()
 
-		for i in range(10):
-			self.sendln("\r\nplease sort numbers into ascending order.")
+		for i in range(30):
 			self.send_problem(i)
 			res = self.recv()
 			if self.check_answer(res) == False:
