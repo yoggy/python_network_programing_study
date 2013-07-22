@@ -12,7 +12,10 @@ if len(sys.argv) < 3:
 host = sys.argv[1]
 port = int(sys.argv[2])
 
-sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+# create socket
+sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)    # for IPv6
+#sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)   # for IPv4
+
 sock.connect((host, port))
 
 while True:
