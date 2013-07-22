@@ -73,7 +73,7 @@ class SampleSession(Session):
 				self.sendln("wrong answer...")
 				return
 			else:
-				self.sendln("good answer!!")
+				self.sendln("correct answer!!")
 		self.sendln("\r\ncongraturation!!! key=85fafe70367a388d5df98c4dfa11eac7")
 
 class SampleHandler(BaseRequestHandler):
