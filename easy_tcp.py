@@ -13,15 +13,15 @@ def is_disable_output(my_level):
 
 def log_e(name, msg): 
 	if is_disable_output(2): return
-	print "easy_tcp[E] %s() : %s" % (name, msg)
+	print >> sys.stderr,"easy_tcp[E] %s() : %s" % (name, msg)
 
 def log_i(name, msg): 
 	if is_disable_output(1): return
-	print "easy_tcp[I] %s() : %s" % (name, msg)
+	print >> sys.stderr, "easy_tcp[I] %s() : %s" % (name, msg)
 
 def log_d(name, msg): 
 	if is_disable_output(0): return
-	print "easy_tcp[D] %s() : %s" % (name, msg)
+	print >> sys.stderr, "easy_tcp[D] %s() : %s" % (name, msg)
 
 def connect(host, port):
 	log_d("connect", "host=%s, port=%d" % (host, port))
