@@ -77,7 +77,7 @@ class SampleSession(Session):
 		self.sendln("\r\ncongraturation!!! key=85fafe70367a388d5df98c4dfa11eac7")
 
 class SampleHandler(BaseRequestHandler):
-	@timeout(30)
+	@timeout(60)
 	def loop(self, session):
 		session.on_connect()
 		session.sendln("bye bye")

@@ -81,8 +81,6 @@ class EasyTCP:
 		self.send(data)
 	
 	def recv(self, read_timeout=0.5):
-		self.socket.setblocking(0)
-		
 		data = ""
 
 		is_first = True;
