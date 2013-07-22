@@ -1,10 +1,19 @@
 #!/usr/bin/python
 
+import sys
 import socket
 from time import sleep
 
+if len(sys.argv) < 3:
+	print "usage : ./01_sample_client.py host port"
+	print
+	exit(1)
+
+host = sys.argv[1]
+port = int(sys.argv[2])
+
 sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
-sock.connect(("::1", 12345))
+sock.connect((host, port))
 
 while True:
 	recv_data = ""

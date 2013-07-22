@@ -1,9 +1,16 @@
 #!/usr/bin/python
-
+import sys
 import easy_tcp
 
+if len(sys.argv) < 3:
+	print "usage : ./02_easy_client.py host port"
+	exit(1)
+
+host = sys.argv[1]
+port = int(sys.argv[2])
+
 # connect to server
-sock = easy_tcp.connect("::1", 12345)
+sock = easy_tcp.connect(host, port)
 
 while True:
 	# read message from server
