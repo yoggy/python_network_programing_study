@@ -9,10 +9,10 @@
 #     $ sudo apt-get install python-pypcap python-dpkt
 #
 # usage
-#     $ ./11_scapy_sample.py
-#     usage : ./11_scapy_sample.py pcap_file port check_string
+#     $ ./10_pypcap_sample.py
+#     usage : ./10_pypcap_sample.py pcap_file port check_string
 #
-#     $ ./11_scapy_sample.py defcon_20-ctf-0566.pcap 24359 rflr
+#     $ ./10_scapy_sample.py defcon_20-ctf-0566.pcap 24359 rflr
 #     (cherry)
 #
 import sys
