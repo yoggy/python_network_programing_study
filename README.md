@@ -7,7 +7,8 @@ now under construction...
   01_sample_client.py - client program
   02_easy_client.py   - client program using easy_tcp
 
-  10_pypcap_sample.py - pcap file handling sample
+  10_pypcap_sample.py - pcap file handling sample (pypcap + dpkt)
+  11_scapy_sample.py  - pcap file handling sample (scapy)
 </pre>
 
 
