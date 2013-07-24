@@ -136,3 +136,43 @@ pcap file handling sample
           .
           .
 </pre>
+
+11_scapy_sample.py
+------------------------------
+<pre>
+  $ ./11_scapy_sample.py
+  usage : ./11_scapy_sample.py pcap_file port check_string
+  
+  $ ./11_scapy_sample.py defcon_20-ctf-0566.pcap 24359 rflr
+  ======== 2012-07-29 06:49:24 ========
+  ###[ Ethernet ]###
+    dst       = 00:50:56:b5:64:e7
+    src       = e4:11:5b:d5:b3:ed
+    type      = 0x86dd
+  ###[ IPv6 ]###
+       version   = 6L
+       tc        = 0L
+       fl        = 0L
+       plen      = 188
+       nh        = TCP
+       hlim      = 64
+       src       = dc20:c7f:2012:b::12
+       dst       = dc20:c7f:2012:3::2
+  ###[ TCP ]###
+          sport     = 55680
+          dport     = 24359
+          seq       = 3999844528L
+          ack       = 3774596463L
+          dataofs   = 8L
+          reserved  = 0L
+          flags     = PA
+          window    = 113
+          chksum    = 0x4587
+          urgptr    = 0
+          options   = [('NOP', None), ('NOP', None), ('Timestamp', (5095271, 1586859374))]
+  ###[ Raw ]###
+             load      = 'Adventure Farm\x00k\xc84\'\x80\x83\x9f\xc8\xdal0\tHI\x86\xb5\xfc\\"P\xf8L\xa5\x00\\\x99\xb4 \xb9\x95\xaab\x8e\xdfH\x8c\xb6\xb8\xea\xe7\xc3\xc37b\xb4O\xbbe\x08#\xbd\x99\x0c/yr\xbb\x1e\xbf\xcbz\x93\xc9W$\x94\xb8\tA\x89[\x0c(1\xf6\x89\xe3j\x10TSV\xff\x04$j\x1fXP\xcd\x80\x8dd$\x04\x85\xc0u\xef\x8b\x14$1\xdbS\xeb\x16j\x05XS\xcd\x80SSSSSRPf\xb8\x89\x01P\xcd\x80\x0f\x0b\xe8\xe5\xff\xff\xff./key\x00\n'
+          .
+          .
+          .
+</pre>
