@@ -48,7 +48,7 @@ class SampleSession(Session):
 		self.answer_str = " ".join([str(v) for v in self.answer])
 
 	def send_problem(self, count):
-		self.sendln("\r\nplease sort numbers into ascending order.")
+		self.sendln("\r\nplease sort numbers in ascending order.")
 
 		self.generate_numbers(count)
 		self.send("numbers : ")
